@@ -11,15 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.2
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.4.1
         with:
           node-version: 16.x
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.2.2
 
       - name: Install deps
         run: pnpm i --frozen-lockfile --strict-peer-dependencies
