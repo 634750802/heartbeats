@@ -33,5 +33,4 @@ jobs:
         uses: Cecilapp/GitHub-Pages-deploy@3.2.1
         with:
           build_dir: docs/.vitepress/dist
-
-      
+          email: action@github.com
